@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <h2 class="text-center">Type in your Quote</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+
+            <label for="name">Name</label>
+            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Your name Sir/Ma'am</p>
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="quote">Quote</label>
+            <textarea class="form-control" id="quote" rows="4" [(ngModel)]="newQuote.quote" name="quote" #quote="ngModel" required></textarea>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>Where's the quote</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #name='ngModel' required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                <p>Who is the author</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="complete">Typed Date </label>
+            <input type='date' id="complete" [(ngModel)]="newQuote.completeDate" name="completeDate" #completeDate="ngModel" required>
+            <div [hidden]="completeDate.valid || completeDate.pristine" class="alert alert-danger">
+                <p>Date please</p>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-success">Quote it</button>
+    </form>
+</div>
