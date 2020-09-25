@@ -15,7 +15,7 @@ The user will be to;
 
 ## Live 
  
- 
+ Have a [view](https://ryan-gm.github.io/Quotes/) 
 
 ## Quotes
 
